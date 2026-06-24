@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even Odd Checker</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #222831;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0px 0px 15px gray;
+            border: 3px solid #00ADB5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            font-size: 18px;
+            margin: 15px;
+            border: 2px solid #00ADB5;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="box">
+
+        <h1>Even or Odd Checker</h1>
+
+        <input type="number" id="number" placeholder="Enter a number">
+
+        <br>
+
+        <button onclick="checkNumber()">Check</button>
+
+        <div id="result"></div>
+
+    </div>
+
+
+<script>
+
+function checkNumber() {
+
+    let num = document.getElementById("number").value;
+
+    let result = document.getElementById("result");
+
+
+    if(num === "") {
+        result.innerHTML = "Please enter a number";
+        return;
+    }
+
+
+    if(num % 2 == 0) {
+        result.innerHTML = num + " is an Even Number";
+    }
+
+    else {
+        result.innerHTML = num + " is an Odd Number";
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
